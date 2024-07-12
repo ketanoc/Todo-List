@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  padding: 20px;
+}
+
+.todo {
+  width: 100%;
+  max-width: 550px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 100px auto 30px;
+  padding: 40px 30px 70px;
+  /* display: flex; */
+  column-gap: 8px;
+  justify-content: start;
+  align-items: center;
+}
+
+.todo-head {
+  color: #3180b9;
+  display: flex;
+  font-size: 25px;
+  gap: 7px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 8px;
+}
+
+.todo-Icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 8px;
+}
+.addBox {
+  display: flex;
+  background: #edeef0;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  border-radius: 30px;
+}
+
+#input-Box {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+}
+
+.box-btn {
+  border: none;
+  background: #3180b9;
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  padding: 16px 50px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#task-container li {
+  list-style: none;
+  padding: 10px 8px 12px 40px;
+  font-size: 17px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+#task-container li::before {
+  content: " ";
+  position: absolute;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  top: 10px;
+  left: 8px;
+}
+
+#task-container li.task-completed {
+  color: #555;
+  text-decoration: line-through;
+}
+
+#task-container li.task-completed::before {
+  background-image: url(images/Blue\ Check.png);
+}
+
+#task-container li span {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #555;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+}
+
+#task-container li span:hover {
+  background-color: #edeef0;
+}
